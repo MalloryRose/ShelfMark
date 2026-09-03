@@ -1,0 +1,16 @@
+node_modules/
+.wxt/
+.output/
+stats.html
+*.zip
+
+# Secrets are injected at build time via Vite env vars, never committed.
+# (The reference implementation gitignored a file it also imported at runtime,
+# which meant a fresh clone could not boot. Don't repeat that.)
+.env
+.env.*
+!.env.example
+
+.DS_Store
+.vscode/
+.idea/

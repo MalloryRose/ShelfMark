@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+/* Tokens, not literals. Both themes are defined here so no colour has its only
+   definition inside a media query — the classic unreadable-in-dark-mode bug. */
+@theme {
+  --color-paper: #fbfaf7;
+  --color-surface: #ffffff;
+  --color-sunk: #f2f1ec;
+  --color-ink: #1a1b20;
+  --color-ink-2: #4a4c57;
+  --color-ink-3: #7b7e8b;
+  --color-rule: #e2e0d8;
+  --color-stamp: #3a3d8f;
+  --color-shelf: #1f6f45;
+  --color-queue: #9b5814;
+
+  --font-display: 'Zilla Slab', Georgia, serif;
+  --font-sans: 'Source Sans 3', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-paper: #131419;
+    --color-surface: #1b1d24;
+    --color-sunk: #0e0f14;
+    --color-ink: #edece7;
+    --color-ink-2: #a9abb7;
+    --color-ink-3: #797c8a;
+    --color-rule: #2b2e38;
+    --color-stamp: #9ea2f0;
+    --color-shelf: #5dbe8a;
+    --color-queue: #d9a05a;
+  }
+}
+
+body {
+  width: 400px;
+  min-height: 320px;
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-stamp);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
