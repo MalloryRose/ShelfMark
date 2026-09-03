@@ -14,12 +14,41 @@ and it checks print holdings, not just digital.
 ## Quick start
 
 ```bash
-npm install          # also runs `wxt prepare` to generate types
-npm run dev          # launches Chrome with the extension loaded, HMR on
+npm install     # also runs `wxt prepare` to generate types
+npm run dev     # builds, then opens a Chrome window with the extension loaded
 ```
 
-Then in the popup: paste a Goodreads profile URL → **Sync**, enter an OverDrive
-address (`lapl.overdrive.com`) → **Add**, then **Scan my libraries**.
+**There is no page to visit.** `npm run dev` prints something like
+`Started dev server @ http://localhost:3000` — that is Vite's module server for
+hot reload, and opening it in a browser returns a 404. The extension's UI is the
+**toolbar popup** in the Chrome window WXT opens for you.
+
+Then: click the Shelfmark icon → paste a Goodreads profile URL → **Sync** →
+enter an OverDrive address (`lapl.overdrive.com`) → **Add** → **Scan my
+libraries**.
+
+### If no browser window opens
+
+WXT needs `web-ext` to launch one. It is in `devDependencies`; if it is missing
+you will see `Load ".output/chrome-mv3-dev" as an unpacked extension manually`
+instead of a browser opening.
+
+```bash
+npm install -D web-ext
+```
+
+### Using your own Chrome profile instead
+
+WXT launches a **fresh, temporary profile**, so you will not be signed in to
+Goodreads there — which matters, because the auto-detect content script needs a
+signed-in session. To use your normal profile, leave `npm run dev` running and
+load the extension by hand:
+
+1. `chrome://extensions` → enable **Developer mode**
+2. **Load unpacked** → select `.output/chrome-mv3-dev`
+
+Hot reload still works. Re-load the extension after changing `wxt.config.ts` or
+anything else that regenerates the manifest.
 
 | Command | Does |
 | --- | --- |
@@ -92,22 +121,21 @@ npm test
 
 ## Roadmap
 
+Full implementation spec — verified API shapes, traps, acceptance criteria — is
+in **[`docs/ROADMAP.md`](docs/ROADMAP.md)**. Agents should read
+[`CLAUDE.md`](CLAUDE.md) first for the architectural invariants.
+
 | Phase | | |
 | --- | --- | --- |
-| 1 | Foundation + digital parity | **in progress** |
+| 1 | Foundation + digital parity | **done** |
 | 2 | Open Library resolver, ISBN clusters, match scoring | next |
 | 3 | BiblioCommons adapter — first print holdings | |
 | 4 | Full dashboard, work-grouped cards, dark mode, a11y | |
 | 5 | Aspen · Koha · Polaris adapters, StoryGraph/Hardcover | |
 | 6 | Pricing, store listing, Firefox + Edge | |
 
-### Phase 1 remaining
-
-- [ ] Shelf picker UI (`shelf:listShelves` is wired; nothing calls it yet)
-- [ ] CSV import UI (`shelf/goodreads-csv.ts` parses; no file input yet)
-- [ ] Multi-library management (storage handles many; popup writes one)
-- [ ] Toolbar badge with the available count
-- [ ] Fixture tests for the OverDrive provider
+Loose ends from phase 1 (none block phase 2) are tracked at the top of
+[`docs/ROADMAP.md`](docs/ROADMAP.md).
 
 ## Notes
 
