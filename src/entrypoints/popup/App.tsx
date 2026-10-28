@@ -12,9 +12,69 @@ import { browser } from '#imports';
 import { availableHoldings, allWorks } from '../../core/db';
 import { MessageError, onEvent, send, type ScanProgress } from '../../core/messages';
 import { getSettings, patchSettings, requestLibraryPermission } from '../../core/settings';
-import type { Holding, ScanRun, WorkIdentity } from '../../core/types';
+import type { Holding, LibraryConfig, ScanRun, WorkIdentity } from '../../core/types';
 import { parseGoodreadsId } from '../../shelf/goodreads-rss';
+import { parseBiblioCommonsKey } from '../../providers/bibliocommons';
 import { parseOverdriveKey } from '../../providers/overdrive';
+import { parsePolarisBaseUrl, polarisProvider } from '../../providers/polaris';
+
+type LibraryKind = 'overdrive' | 'bibliocommons' | 'polaris';
+
+const KIND_LABEL: Record<LibraryKind, { name: string; placeholder: string }> = {
+  overdrive: { name: 'OverDrive / Libby (ebooks & audiobooks)', placeholder: 'lapl.overdrive.com' },
+  bibliocommons: { name: 'BiblioCommons catalog (print)', placeholder: 'seattle.bibliocommons.com' },
+  polaris: { name: 'Polaris catalog (print)', placeholder: 'catalog.denverlibrary.org' },
+};
+
+/** What the user typed → a library entry, or a message saying what to type instead. */
+async function toLibraryConfig(kind: LibraryKind, input: string): Promise<LibraryConfig> {
+  switch (kind) {
+    case 'overdrive': {
+      const key = parseOverdriveKey(input);
+      if (!key) throw new Error('Enter your OverDrive address, e.g. lapl.overdrive.com');
+      const baseUrl = `https://${key}.overdrive.com`;
+      // Ask for this origin only now — a fresh install can reach no catalog.
+      if (!(await requestLibraryPermission(baseUrl))) {
+        throw new Error('Permission is needed to read this library’s catalog.');
+      }
+      return {
+        id: `overdrive:${key}`,
+        label: key.toUpperCase(),
+        providerId: 'overdrive',
+        baseUrl,
+        providerKey: key,
+        enabled: true,
+      };
+    }
+    case 'bibliocommons': {
+      const key = parseBiblioCommonsKey(input);
+      if (!key) throw new Error('Enter your catalog address, e.g. seattle.bibliocommons.com');
+      // Lookups go to the shared gateway, already in host_permissions; the
+      // catalog host is only ever opened as a link, which needs no grant.
+      return {
+        id: `bibliocommons:${key}`,
+        label: key.toUpperCase(),
+        providerId: 'bibliocommons',
+        baseUrl: `https://${key}.bibliocommons.com`,
+        providerKey: key,
+        enabled: true,
+      };
+    }
+    case 'polaris': {
+      const baseUrl = parsePolarisBaseUrl(input);
+      if (!baseUrl) throw new Error('Enter your catalog address, e.g. catalog.denverlibrary.org');
+      if (!(await requestLibraryPermission(baseUrl))) {
+        throw new Error('Permission is needed to read this library’s catalog.');
+      }
+      // Catch a wrong URL now, not as a scan where every book fails.
+      if ((await polarisProvider.detect?.(baseUrl, AbortSignal.timeout(15_000))) === false) {
+        throw new Error('That address doesn’t look like a Polaris catalog.');
+      }
+      const host = new URL(baseUrl).host;
+      return { id: `polaris:${host}`, label: host, providerId: 'polaris', baseUrl, enabled: true };
+    }
+  }
+}
 
 interface Row {
   work: WorkIdentity;
@@ -24,6 +84,8 @@ interface Row {
 export function App() {
   const [goodreads, setGoodreads] = useState('');
   const [library, setLibrary] = useState('');
+  const [libraryKind, setLibraryKind] = useState<LibraryKind>('bibliocommons');
+  const [libraries, setLibraries] = useState<LibraryConfig[]>([]);
   const [shelfCount, setShelfCount] = useState(0);
   const [rows, setRows] = useState<Row[]>([]);
   const [run, setRun] = useState<ScanRun | undefined>();
@@ -35,7 +97,7 @@ export function App() {
     void (async () => {
       const settings = await getSettings();
       if (settings.goodreadsId) setGoodreads(settings.goodreadsId);
-      if (settings.libraries[0]?.providerKey) setLibrary(settings.libraries[0].providerKey);
+      setLibraries(settings.libraries);
 
       // Offer the auto-detected profile when the user hasn't set one.
       if (!settings.goodreadsId) {
@@ -95,27 +157,21 @@ export function App() {
 
   const onSaveLibrary = () =>
     guard('Adding library…', async () => {
-      const key = parseOverdriveKey(library);
-      if (!key) throw new Error('Enter your OverDrive address, e.g. lapl.overdrive.com');
-
-      const baseUrl = `https://${key}.overdrive.com`;
-      // Ask for this origin only now — a fresh install can reach no catalog.
-      if (!(await requestLibraryPermission(baseUrl))) {
-        throw new Error('Permission is needed to read this library’s catalog.');
-      }
-
-      await patchSettings({
-        libraries: [
-          {
-            id: `overdrive:${key}`,
-            label: key.toUpperCase(),
-            providerId: 'overdrive',
-            baseUrl,
-            providerKey: key,
-            enabled: true,
-          },
-        ],
+      const entry = await toLibraryConfig(libraryKind, library);
+      // Replace by id, keep the rest: a reader with print and Libby needs both.
+      const { libraries: current } = await getSettings();
+      const next = await patchSettings({
+        libraries: [...current.filter((l) => l.id !== entry.id), entry],
       });
+      setLibraries(next.libraries);
+      setLibrary('');
+    });
+
+  const onRemoveLibrary = (id: string) =>
+    guard('Removing library…', async () => {
+      const { libraries: current } = await getSettings();
+      const next = await patchSettings({ libraries: current.filter((l) => l.id !== id) });
+      setLibraries(next.libraries);
     });
 
   const onScan = () =>
@@ -163,14 +219,47 @@ export function App() {
         </div>
       </label>
 
-      <label class="flex flex-col gap-1">
+      <div class="flex flex-col gap-1">
         <span class="font-[--font-mono] text-[10px] uppercase tracking-wider text-[--color-ink-3]">
-          OverDrive library
+          Libraries
         </span>
+        {libraries.length > 0 && (
+          <ul class="m-0 flex list-none flex-col gap-1 p-0">
+            {libraries.map((l) => (
+              <li key={l.id} class="flex items-center justify-between gap-2 text-sm">
+                <span>
+                  {l.label}{' '}
+                  <span class="font-[--font-mono] text-[10px] text-[--color-ink-3]">{l.providerId}</span>
+                </span>
+                <button
+                  class="rounded border border-[--color-rule] px-2 py-0.5 text-xs disabled:opacity-50"
+                  disabled={!!busy || scanning}
+                  aria-label={`Remove ${l.label}`}
+                  onClick={() => onRemoveLibrary(l.id)}
+                >
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+        <select
+          class="rounded border border-[--color-rule] bg-[--color-surface] px-2 py-1.5 text-sm text-[--color-ink]"
+          aria-label="Library catalog type"
+          value={libraryKind}
+          onChange={(e) => setLibraryKind((e.target as HTMLSelectElement).value as LibraryKind)}
+        >
+          {(Object.keys(KIND_LABEL) as LibraryKind[]).map((kind) => (
+            <option key={kind} value={kind}>
+              {KIND_LABEL[kind].name}
+            </option>
+          ))}
+        </select>
         <div class="flex gap-2">
           <input
             class="min-w-0 flex-1 rounded border border-[--color-rule] bg-[--color-surface] px-2 py-1.5 text-sm text-[--color-ink]"
-            placeholder="lapl.overdrive.com"
+            aria-label="Library address"
+            placeholder={KIND_LABEL[libraryKind].placeholder}
             value={library}
             onInput={(e) => setLibrary((e.target as HTMLInputElement).value)}
           />
@@ -182,7 +271,7 @@ export function App() {
             Add
           </button>
         </div>
-      </label>
+      </div>
 
       <div class="flex items-center gap-2">
         <button
@@ -252,7 +341,9 @@ export function App() {
                     rel="noopener"
                     class="rounded bg-[--color-sunk] px-1.5 py-0.5 font-[--font-mono] text-[10px] uppercase tracking-wide text-[--color-shelf] no-underline"
                   >
-                    {h.format} · {h.copiesAvailable ?? 0} free
+                    {h.format} ·{' '}
+                    {h.branches?.find((b) => b.status === 'available')?.name ??
+                      `${h.copiesAvailable ?? 0} free`}
                   </a>
                 ))}
               </div>

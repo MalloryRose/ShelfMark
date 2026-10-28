@@ -22,6 +22,14 @@ const LEADING_ARTICLE = /^(?:the|a|an)\s+/i;
 /** Author credit noise: `Frank Herbert, PhD`, `Herbert, Frank`. */
 const AUTHOR_SUFFIX = /,\s*(?:phd|md|jr\.?|sr\.?|i{2,3}|iv)\.?$/i;
 
+/**
+ * MARC name-heading noise, as print catalogs display it verbatim:
+ * `Tolkien, J. R. R. (John Ronald Reuel), 1892-1973, author.`
+ */
+const MARC_FULLER_FORM = /\([^)]*\)/g;
+const MARC_DATES = /\b\d{4}-(?:\d{4})?/g;
+const MARC_RELATOR = /,?\s*\b(?:author|editor|illustrator|translator|narrator|contributor)\b\.?/gi;
+
 export function stripDiacritics(input: string): string {
   return input.normalize('NFD').replace(/\p{Diacritic}/gu, '');
 }
@@ -59,7 +67,16 @@ export function normalizeTitle(raw: string): string {
 
 /** Comparison form of an author. Handles `Surname, Given` from catalog records. */
 export function normalizeAuthor(raw: string): string {
-  let out = raw.trim().replace(AUTHOR_SUFFIX, '');
+  // Strip MARC noise first, or the dates and relator terms end up read as the
+  // given name once the heading is un-inverted below.
+  let out = raw
+    .replace(MARC_FULLER_FORM, '')
+    .replace(MARC_DATES, '')
+    .replace(MARC_RELATOR, '')
+    .replace(/\s*,(?:\s*,)+/g, ',')
+    .replace(/[\s,]+$/, '')
+    .trim()
+    .replace(AUTHOR_SUFFIX, '');
 
   // Catalogs invert names; reading lists don't.
   const comma = out.indexOf(',');

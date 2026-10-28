@@ -8,13 +8,16 @@
  */
 
 import type { HoldingsProvider } from '../core/types';
+import { bibliocommonsProvider } from './bibliocommons';
 import { overdriveProvider } from './overdrive';
+import { polarisProvider } from './polaris';
 
 const providers = new Map<string, HoldingsProvider>(
   [
     overdriveProvider,
-    // Phase 3: bibliocommonsProvider  — print, largest coverage per adapter
-    // Phase 5: aspenProvider, kohaProvider, polarisProvider
+    bibliocommonsProvider,
+    polarisProvider,
+    // Phase 5: aspenProvider, kohaProvider, sierraProvider
   ].map((p) => [p.id, p]),
 );
 

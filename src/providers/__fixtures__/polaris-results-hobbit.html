@@ -1,0 +1,2319 @@
+
+
+
+
+<div class='c-results-utility c-results-utility--full'>
+  <div class="c-results-utility__container c-results-utility__container--result-count">
+    <div class="c-results-utility-result-count">
+        1
+        -
+        20
+        of
+        59
+    </div>
+    <div class="c-results-utility-per-page form-inline">  
+      <div class="c-results-utility-per-page__select-container select-styled">    
+        <select aria-label="Results per page dropdown" class="c-results-utility-per-page__select" id="dropdownResultsPerPageTop" onchange="javascript:ajaxLoadResultsPage(1, 0, 'Top', 0);">
+           <option value="10">10</option>
+           <option value="20" selected>20</option>
+           <option value="30">30</option>
+           <option value="50">50</option>
+           <option value="100">100</option>
+        </select>
+      </div>
+      <span aria-label="per page"  class="c-results-utility-per-page__label">per page</span>
+    </div>
+  </div>
+
+  
+      <div class="c-results-utility__container c-results-utility__container--sort-narrow c-results-utility__container--affix">
+
+        
+          <div class="c-results-utility-sort">
+            <label for="dropdownSortByTop" class="c-results-utility-sort__label">Sort</label>
+            <div class="c-results-utility-sort__select-container">             
+              
+                      <select style="width:100%; max-width: 150px;" class="c-results-utility-sort__select js-select-width" id="dropdownSortByTop" onchange="javascript:ajaxSortSearchResults('Top');" style="width: auto">
+                  
+                      <option value="RELEVANCE" selected>Relevance</option>
+                  
+                      <option value="MP">Most popular</option>
+                  
+                      <option value="AU">Author</option>
+                  
+                      <option value="TI">Title</option>
+                  
+                      <option value="CALL">Call Number</option>
+                  
+                      <option value="PD">Publication date</option>
+                  
+                      <option value="AU_TI">Author, then Title</option>
+                  
+                      <option value="AU_PD">Author, then Publication date</option>
+                  
+                      <option value="TI_AU">Title, then Author</option>
+                  
+                      <option value="TI_PD">Title, then Publication date</option>
+                  
+                      <option value="TI_TOM">Title, then Format</option>
+                  
+                      <option value="PD_AU">Publication date, then Author</option>
+                  
+                      <option value="PD_TI">Publication date, then Title</option>
+                  
+                      <option value="CALL_AU">Call number, then Author</option>
+                  
+                      <option value="CALL_TI">Call number, then Title</option>
+                  
+                      <option value="CALL_PD">Call number, then Publication Date</option>
+                  
+                      </select>
+                   
+            </div>
+          </div>
+        
+
+        <div class="c-results-utility-narrow" style="display: block;" data-show-at-load="">
+          <div class="c-accordion c-accordion--results-utility" id="narrow-container" role="tablist" aria-multiselectable="true">
+            <div class="c-accordion__panel" id="c-accordion__panel-narrow">
+              <div class="c-accordion__heading" role="tab">
+                <h5 class="c-accordion__title">
+                  <a class="c-results-utility-narrow__link collapsed " role="button" href="javascript:showModalBasic('https://catalog.denverlibrary.org/search/components/ajaxNarrowYourSearch.aspx', 'Narrow your search')">                   
+                    <span class="c-results-utility-narrow__narrow-label">Narrow</span>
+                    <span class="c-results-utility-narrow__narrowed-label">Narrowed</span>
+                  </a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  
+                 
+
+
+  <div class="c-results-utility__container c-results-utility__container--pagination c-results-utility__container--last">
+    <div class="c-results-utility-full-pagination">
+        
+    </div>
+  </div>
+ 
+
+</div>
+
+
+
+<div id="searchResultsDIV">
+
+        <div class="search__position">
+            <a id="__pos-1" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_1" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_1" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=/SC.GIF&client=denvp&upc=&oclc=916511" alt="J.R.R. Tolkien&#39;s The hobbit" data-position="1" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid01.gif" alt="Book" title="Book" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">1968</div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_1"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">1.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=1&amp;cn=33305"><span class="nsm-short-item nsm-e135">J.R.R. <span class="nsm-hit-text">Tolkien&#39;s</span> <span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span></span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Gray%2c+Patsey.&amp;page=0"><span class="nsm-browse-text">Gray, Patsey.</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">822 G7934j</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">1 (of 1)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="1"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_1"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=1&bibid=33305&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=1&cn=33305">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(1, 33305, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_1 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 1, '33305', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-2" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_2" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_2" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780395282083/SC.GIF&client=denvp&upc=&oclc=5007475" alt="The individuated hobbit : Jung, Tolkien, and the archetypes of Middle-Earth" data-position="2" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid01.gif" alt="Book" title="Book" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">1979</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780395282083 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780395282083_2" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780395282083','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_2"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">2.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=2&amp;cn=91613"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> individuated <span class="nsm-hit-text">hobbit</span> : Jung, <span class="nsm-hit-text">Tolkien</span>, and <span class="nsm-hit-text">the</span> archetypes of Middle-Earth</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=O%27Neill%2c+Timothy+R.&amp;page=0"><span class="nsm-browse-text">O&#39;Neill, Timothy R.</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">828 T577zone</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">2 (of 2)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="2"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_2"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=2&bibid=91613&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=2&cn=91613">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(2, 91613, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_2 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 2, '91613', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-3" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_3" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_3" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780063447998/SC.GIF&client=denvp&upc=&oclc=1489465075" alt="The Hobbit, or there and back again" data-position="3" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid01.gif" alt="Book" title="Book" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2025</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780063447998 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780063447998_3" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780063447998','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_3"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">3.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=3&amp;cn=2732099"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">Hobbit</span>, or there and back again</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Tolkien%2c+J.+R.+R.+(John+Ronald+Reuel)%2c+1892-1973%2c&amp;page=0"><span class="nsm-browse-text"><span class="nsm-hit-text">Tolkien</span></span><span class="nsm-browse-text">, J. R. R. (John Ronald Reuel), 1892-1973,</span> author, creator.</a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">jGN Hobbit</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">2 (of 8)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="3"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_3"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=3&bibid=2732099&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=3&cn=2732099">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(3, 2732099, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_3 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 3, '2732099', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-4" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_4" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_4" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=/SC.GIF&client=denvp&upc=794043165344&oclc=830006823" alt="The Hobbit : an unexpected journey" data-position="4" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid40.gif" alt="Blu-ray Disc" title="Blu-ray Disc" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2013</div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_4"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">4.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=4&amp;cn=1040303"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">Hobbit</span> : an unexpected journey</span></a>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">BLU-RAY H</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">4 (of 4)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="4"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_4"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=4&bibid=1040303&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=4&cn=1040303">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(4, 1040303, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_4 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 4, '1040303', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-5" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_5" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_5" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9781684812097/SC.GIF&client=denvp&upc=&oclc=1400075268" alt="Why we love Middle-Earth : an enthusiast&#39;s book about Tolkien, Middle-earth, and the LotR Fandom" data-position="5" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid01.gif" alt="Book" title="Book" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2023</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9781684812097 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9781684812097_5" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9781684812097','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_5"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">5.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=5&amp;cn=2542033"><span class="nsm-short-item nsm-e135">Why we love Middle-Earth : an enthusiast&#39;s book about <span class="nsm-hit-text">Tolkien</span>, Middle-earth, and <span class="nsm-hit-text">the</span> LotR Fandom</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Marchese%2c+Shawn+E.%2c&amp;page=0"><span class="nsm-browse-text">Marchese, Shawn E.,</span> author.</a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">823 Tolkien</span>
+	</div><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e33">Web Site: </span><span class="nsm-short-item nsm-e33"> <a href="https://img1.od-cdn.com/ImageType-100/6852-1/{42A6A1FC-2D5E-4DC0-8AB0-04E138DDC72E}IMG100.JPG" target="_blank">Cover image</a></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">0 (of 1)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="5"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_5"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=5&bibid=2542033&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=5&cn=2542033">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(5, 2542033, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_5 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 5, '2542033', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-6" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_6" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_6" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780780695009/SC.GIF&client=denvp&upc=794043165368&oclc=829784162" alt="The hobbit : an unexpected journey" data-position="6" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid33.gif" alt="DVD" title="DVD" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2013</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780780695009 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780780695009_6" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780780695009','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_6"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">6.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=6&amp;cn=1352397"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span> : an unexpected journey</span></a>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">DVD H</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">1 (of 2)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="6"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_6"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=6&bibid=1352397&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=6&cn=1352397">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(6, 1352397, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_6 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 6, '1352397', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-7" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_7" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_7" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780547739465/SC.GIF&client=denvp&upc=&oclc=772100935" alt="Exploring J.R.R. Tolkien&#39;s The hobbit" data-position="7" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid01.gif" alt="Book" title="Book" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2012</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780547739465 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780547739465_7" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780547739465','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_7"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">7.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=7&amp;cn=998873"><span class="nsm-short-item nsm-e135">Exploring J.R.R. <span class="nsm-hit-text">Tolkien&#39;s</span> <span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span></span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Olsen%2c+Corey.&amp;page=0"><span class="nsm-browse-text">Olsen, Corey.</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">823 Tolkien</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">2 (of 3)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="7"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_7"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=7&bibid=998873&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=7&cn=998873">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(7, 998873, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_7 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 7, '998873', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-8" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_8" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_8" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9781405629423/SC.GIF&client=denvp&upc=&oclc=212781573" alt="The hobbit" data-position="8" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid41.gif" alt="Eaudiobook" title="Eaudiobook" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2002</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9781405629423 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9781405629423_8" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9781405629423','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_8"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">8.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=8&amp;cn=1007141"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span></span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Tolkien%2c+J.+R.+R.+(John+Ronald+Reuel)%2c+1892-1973.&amp;page=0"><span class="nsm-browse-text"><span class="nsm-hit-text">Tolkien</span></span><span class="nsm-browse-text">, J. R. R. (John Ronald Reuel), 1892-1973.</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">Audio eBook</span>
+	</div><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e33">Web Site: </span><span class="nsm-short-item nsm-e33"><a href="http://downloadmedia.denverlibrary.org/ContentDetails.htm?ID=1E05F0C5-28CE-433E-9332-027CE691E2C2" target="_blank">Download Item</a> Available online.</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="8"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=8&cn=1007141">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_8 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 8, '1007141', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-9" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_9" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_9" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780063388475/SC.GIF&client=denvp&upc=025024891281&oclc=" alt="The hobbit" data-position="9" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid36.gif" alt="Ebook" title="Ebook" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2001</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780063388475 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780063388475_9" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780063388475','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_9"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">9.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=9&amp;cn=2564460"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span></span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Tolkien%2c+J.+R.+R.%2c+(John+Ronald+Reuel)%2c+1892-1973&amp;page=0"><span class="nsm-browse-text"><span class="nsm-hit-text">Tolkien</span></span><span class="nsm-browse-text">, J. R. R.,</span> author.<span class="nsm-browse-text"> (John Ronald Reuel), 1892-1973</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">eBook</span>
+	</div><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e33">Web Site: </span><span class="nsm-short-item nsm-e33"> <a href="http://link.overdrive.com/?websiteID=29&amp;titleID=10234696" target="_blank">Available online</a></span> — <span class="nsm-short-item nsm-e33"> <a href="https://samples.overdrive.com/?crid=26a6c5f0-1afb-458d-9cef-69b0789ada80&amp;.epub-sample.overdrive.com" target="_blank">Click here to access excerpt</a></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="9"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=9&cn=2564460">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_9 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 9, '2564460', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-10" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_10" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_10" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9781598874495/SC.GIF&client=denvp&upc=&oclc=128313259" alt="The hobbit" data-position="10" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid41.gif" alt="Eaudiobook" title="Eaudiobook" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2007</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9781598874495 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9781598874495_10" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9781598874495','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_10"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">10.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=10&amp;cn=667610"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span></span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Tolkien%2c+J.+R.+R.+(John+Ronald+Reuel)%2c+1892-1973.&amp;page=0"><span class="nsm-browse-text"><span class="nsm-hit-text">Tolkien</span></span><span class="nsm-browse-text">, J. R. R. (John Ronald Reuel), 1892-1973.</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">Audio eBook</span>
+	</div><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e33">Web Site: </span><span class="nsm-short-item nsm-e33"><a href="http://downloadmedia.denverlibrary.org/ContentDetails.htm?ID=CC151898-838C-4D68-8817-80EE2558CBEF" target="_blank">Download Item</a> Available online.</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="10"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=10&cn=667610">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_10 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 10, '667610', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-11" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_11" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_11" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780805718256/SC.GIF&client=denvp&upc=&oclc=632164675" alt="The Hobbit : a journey into maturity" data-position="11" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid36.gif" alt="Ebook" title="Ebook" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">1995</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780805718256 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780805718256_11" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780805718256','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_11"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">11.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=11&amp;cn=1661920"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">Hobbit</span> : a journey into maturity</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Green%2c+William+H.+(William+Howard)&amp;page=0"><span class="nsm-browse-text">Green, William H. (William Howard)</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">eBook</span>
+	</div><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e33">Web Site: </span><span class="nsm-short-item nsm-e33"><a href="https://denverlibrary.idm.oclc.org/login?url=http://link.galegroup.com/apps/pub/3EYG/GVRL?sid=gale_marc&amp;u=denver" target="_blank">Available via Gale eBooks</a> </span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="11"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=11&cn=1661920">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_11 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 11, '1661920', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-12" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_12" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_12" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780547536736/SC.GIF&client=denvp&upc=&oclc=843125265" alt="The hobbit (movie tie-in)" data-position="12" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid36.gif" alt="Ebook" title="Ebook" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2012</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780547536736 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780547536736_12" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780547536736','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_12"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">12.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=12&amp;cn=1114405"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span> (movie tie-in)</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Tolkien%2c+J.+R.+R.+(John+Ronald+Reuel)%2c+1892-1973.&amp;page=0"><span class="nsm-browse-text"><span class="nsm-hit-text">Tolkien</span></span><span class="nsm-browse-text">, J. R. R. (John Ronald Reuel), 1892-1973.</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">eBook</span>
+	</div><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e33">Web Site: </span><span class="nsm-short-item nsm-e33">Available online <a href="http://downloadmedia.denverlibrary.org/ContentDetails.htm?ID=DF6F55B5-05B8-4A3C-B2ED-AE23F1856E8D" target="_blank">Download Item</a></span> — <span class="nsm-short-item nsm-e33">Click here to access excerpt <a href="https://samples.overdrive.com/hobbit-df6f55?.epub-sample.overdrive.com" target="_blank">Download Item</a></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="12"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=12&cn=1114405">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_12 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 12, '1114405', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-13" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_13" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_13" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780061917738/SC.GIF&client=denvp&upc=&oclc=432659865" alt="The hobbit, or, There and back again" data-position="13" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid36.gif" alt="Ebook" title="Ebook" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2009</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780061917738 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780061917738_13" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780061917738','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_13"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">13.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=13&amp;cn=744691"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span>, or, There and back again</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Tolkien%2c+J.+R.+R.+(John+Ronald+Reuel)%2c+1892-1973.&amp;page=0"><span class="nsm-browse-text"><span class="nsm-hit-text">Tolkien</span></span><span class="nsm-browse-text">, J. R. R. (John Ronald Reuel), 1892-1973.</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">eBook</span>
+	</div><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e33">Web Site: </span><span class="nsm-short-item nsm-e33"><a href="http://downloadmedia.denverlibrary.org/ContentDetails.htm?ID=6CB8684A-0FBC-4606-B598-4E3AB789B69E" target="_blank">Download Item</a> Available online.</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="13"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=13&cn=744691">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_13 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 13, '744691', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-14" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_14" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_14" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780547951973/SC.GIF&client=denvp&upc=&oclc=809542369" alt="The hobbit, or, There and back again" data-position="14" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid36.gif" alt="Ebook" title="Ebook" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2012</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780547951973 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780547951973_14" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780547951973','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_14"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">14.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=14&amp;cn=1006939"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span>, or, There and back again</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Tolkien%2c+J.+R.+R.+(John+Ronald+Reuel)%2c+1892-1973.&amp;page=0"><span class="nsm-browse-text"><span class="nsm-hit-text">Tolkien</span></span><span class="nsm-browse-text">, J. R. R. (John Ronald Reuel), 1892-1973.</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">eBook</span>
+	</div><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e33">Web Site: </span><span class="nsm-short-item nsm-e33"><a href="http://downloadmedia.denverlibrary.org/ContentDetails.htm?ID=C9B54C84-0369-49C5-A0B3-98E3353A2129" target="_blank">Download Item</a> Available online.</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="14"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=14&cn=1006939">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_14 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 14, '1006939', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-15" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_15" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_15" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9781436148894/SC.GIF&client=denvp&upc=978143614889&oclc=232963243" alt="The hobbit : the enchanting prelude to The lord of the rings" data-position="15" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid37.gif" alt="Playaway" title="Playaway" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2008</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9781436148894 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9781436148894_15" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9781436148894','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_15"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">15.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=15&amp;cn=2683462"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span> : <span class="nsm-hit-text">the</span> enchanting prelude to <span class="nsm-hit-text">The</span> lord of <span class="nsm-hit-text">the</span> rings</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Tolkien%2c+J.+R.+R.+(John+Ronald+Reuel)%2c+1892-1973%2c&amp;page=0"><span class="nsm-browse-text"><span class="nsm-hit-text">Tolkien</span></span><span class="nsm-browse-text">, J. R. R. (John Ronald Reuel), 1892-1973,</span> author.</a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">FIC TOLKIEN J PLAYAWAY</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">0 (of 2)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">2</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="15"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_15"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=15&bibid=2683462&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=15&cn=2683462">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(15, 2683462, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_15 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 15, '2683462', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-16" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_16" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_16" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780718021764/SC.GIF&client=denvp&upc=&oclc=910568768" alt="A hobbit, a wardrobe, and a great war : how J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918" data-position="16" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid01.gif" alt="Book" title="Book" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2015</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780718021764 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780718021764_16" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780718021764','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_16"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">16.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=16&amp;cn=2769215"><span class="nsm-short-item nsm-e135">A <span class="nsm-hit-text">hobbit</span>, a wardrobe, and a great war : how J.R.R. <span class="nsm-hit-text">Tolkien</span> and C.S. Lewis rediscovered faith, friendship, and heroism in <span class="nsm-hit-text">the</span> cataclysm of 1914-1918</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Loconte%2c+Joe%2c+1961-&amp;page=0"><span class="nsm-browse-text">Loconte, Joe, 1961-</span> author.</a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">823.912 Loconte</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">1 (of 2)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="16"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_16"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=16&bibid=2769215&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=16&cn=2769215">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(16, 2769215, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_16 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 16, '2769215', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-17" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_17" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_17" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9781405629423/SC.GIF&client=denvp&upc=&oclc=" alt="The hobbit; or, There and back again" data-position="17" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid41.gif" alt="Eaudiobook" title="Eaudiobook" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">1937</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9781405629423 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9781405629423_17" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9781405629423','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_17"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">17.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=17&amp;cn=1006645"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span>; or, There and back again</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Tolkien%2c+J.+R.+R.+(John+Ronald+Reuel)%2c+1892-1973.&amp;page=0"><span class="nsm-browse-text"><span class="nsm-hit-text">Tolkien</span></span><span class="nsm-browse-text">, J. R. R. (John Ronald Reuel), 1892-1973.</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">Audio eBook</span>
+	</div><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e33">Web Site: </span><span class="nsm-short-item nsm-e33">Available online <a href="http://downloadmedia.denverlibrary.org/ContentDetails.htm?ID=1E05F0C5-28CE-433E-9332-027CE691E2C2" target="_blank">Download Item</a></span> — <span class="nsm-short-item nsm-e33">Click here to access excerpt <a href="http://excerpts.contentreserve.com/FormatType-25/1087-1\150134-TheHobbit.wma" target="_blank">Download Item</a></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="17"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=17&cn=1006645">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_17 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 17, '1006645', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-18" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_18" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_18" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=/SC.GIF&client=denvp&upc=794043161056&oclc=877975102" alt="The hobbit. The desolation of Smaug. [two-disc version]" data-position="18" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid40.gif" alt="Blu-ray Disc" title="Blu-ray Disc" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2014</div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_18"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">18.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=18&amp;cn=2118777"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">hobbit</span>. <span class="nsm-hit-text">The</span> desolation of Smaug. [two-disc version]</span></a>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">BLU-RAY H</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">7 (of 7)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="18"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_18"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=18&bibid=2118777&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=18&cn=2118777">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(18, 2118777, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_18 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 18, '2118777', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-19" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_19" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_19" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780345445605/SC.GIF&client=denvp&upc=&oclc=47032245" alt="The Hobbit : an illustrated edition of the fantasy classic" data-position="19" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid01.gif" alt="Book" title="Book" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2001</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780345445605 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780345445605_19" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780345445605','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_19"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">19.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=19&amp;cn=423234"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">Hobbit</span> : an illustrated edition of <span class="nsm-hit-text">the</span> fantasy classic</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Dixon%2c+Chuck%2c+1954-&amp;page=0"><span class="nsm-browse-text">Dixon, Chuck, 1954-</span></a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">jGN Hobbit</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">0 (of 3)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">1</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="19"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_19"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=19&bibid=423234&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=19&cn=423234">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(19, 423234, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_19 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 19, '423234', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="search__position">
+            <a id="__pos-20" href="#" aria-hidden="true" aria-label="Search Result"></a>
+        </div>
+        <div class="content-module content-module--search-result">
+            <div class="content-container c-title-detail__title-display">
+                <div class="c-title-detail c-title-detail--initial-two-col">
+                    <div class="c-title-detail__container ">
+                        <div class="c-title-detail-media__container c-title-detail-media__container--no-border">
+                            <div class="c-title-detail__image-container">
+                                <div id="srcp_20" class="hover__container" width="1%" align="center" valign="top">
+                                    <img id="hover_image_20" class='c-title-detail__thumbnail hover__thumbnail' src="https://secure.syndetics.com/index.aspx?isbn=9780711288980/SC.GIF&client=denvp&upc=&oclc=1370001702" alt="The Hobbit encyclopedia" data-position="20" data-isRBdigital="False">
+                                </div>
+                            </div>
+                            <div class="c-title-detail-meta">
+                                <div class="c-title-detail-formats__list">
+
+                                            <img class="c-title-detail-formats__img" src="https://catalog.denverlibrary.org/custom/themes/denver/formats/formatid01.gif" alt="Book" title="Book" border="0"/>
+
+                                </div>
+                            </div>
+
+                                <div class="c-title-detail__3rd-party c-title-detail__pub-year">2023</div>
+
+                                <div class="c-title-detail__3rd-party">
+
+                                        <div class="novelist-lgr-9780711288980 c-title-detail__3rd-party-item--novelist-lexile" style="height:auto; width:auto !important;">
+                                        </div>
+
+                                        <div class="gbs-preview-div c-title-detail__3rd-party-item--google-preview" id="gbs_ISBN:9780711288980_20" >
+                                            <a class="gbs-preview-link" href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxGooglePreview.aspx?isbn=ISBN:9780711288980','', true)">
+                                                <img src="https://catalog.denverlibrary.org/themes/shared/gbs_preview_button.gif" title="Google Books Preview" alt="Google Books Preview" border="0" />
+                                            </a>
+                                        </div>
+
+                            </div>
+
+                        </div>
+                        <div class="c-title-detail-info__container">
+                            <div class="c-title-detail-info-main__container">
+                                <div class="c-title-detail-info__result-num">
+
+                                </div>
+                            </div>
+                            <div class="c-title-detail-info-secondary__container " id="plres_20"  >
+				                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+					                <tr class="nsm-brief-primary-zone">
+	<td width="100%"><table width="100%" cellpadding="5" cellspacing="0">
+		<tr valign="top">
+			<td width="1%" align="right" style="padding-left: 0; padding-right: 0;">20.</td><td style="align: left; width: 100%; valign: top; margin-top: 5px;"><div class="nsm-brief-primary-title-group">
+				<a class="nsm-brief-action-link" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&amp;pos=20&amp;cn=2618596"><span class="nsm-short-item nsm-e135"><span class="nsm-hit-text">The</span> <span class="nsm-hit-text">Hobbit</span> encyclopedia</span></a>
+			</div><div class="nsm-brief-primary-author-group">
+				by <span class="nsm-short-item nsm-e118"><a class="nsm-browse-link" href="../search/browse.aspx?ctx=1.1033.0.0.6&amp;type=Browse&amp;by=AU&amp;term=Bador%2c+Damien%2c&amp;page=0"><span class="nsm-browse-text">Bador, Damien,</span> author.</a></span>
+			</div></td><td nowrap="" width="1%" style="valign: top; text-align: right;"></td>
+		</tr>
+	</table></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e104">Call Number: </span><span class="nsm-short-item nsm-e104">823 Tolkien</span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e32">Available Copies: </span><span class="nsm-short-item nsm-e"><span class="nsm-brief-inline-subzone">2 (of 2)</span></span>
+	</div></td>
+</tr><tr class="nsm-brief-secondary-zone">
+	<td><div class="nsm-brief-standard-group">
+		<span class="nsm-brief-label nsm-e8">Current Holds: </span><span class="nsm-short-item nsm-e8">0</span>
+	</div></td>
+</tr>
+
+    				                <tr>
+						                <td colspan=2>
+
+						                </td>
+					                </tr>
+				                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-title-detail-actions__container">
+                        <ul id="c-title-detail__button-list-" class="c-title-detail-actions__list" data-item-pos="20"  data-item-page="0">
+
+                            <li class="c-title-detail-actions__item button-brief-availability" role="presentation">
+                                <a class="c-title-detail-actions__btn" id="buttonAvailability_20"
+                                    href="javascript:showModalBasicWithIframe('https://catalog.denverlibrary.org/search/components/ajaxavailability.aspx?fp=1&level=local&morelink=0&pos=20&bibid=2618596&displayAeonOnly=0', '', false, false, false, 'Availability')">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Where Is It?
+				                </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-fulldisplay" role="presentation">
+					            <a class="c-title-detail-actions__btn" href="https://catalog.denverlibrary.org/search/title.aspx?ctx=1.1033.0.0.6&pos=20&cn=2618596">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    Full Details
+					            </a>
+                            </li>
+
+                            <li class="c-title-detail-actions__item button-brief-request" role="presentation">
+
+                                    <a class="c-title-detail-actions__btn" href="javascript:checkRequestLevel(20, 2618596, 1)">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                        Place Hold
+                                    </a>
+
+                            </li>
+
+                       </ul>
+                       <div class="c-title-detail-actions__add-to-my-list dropdown--scroll-into-view">
+
+                           <span id=addtolist_20 ><a class="c-add-to-my-list" href="javascript:AddToList(43, 20, '2618596', 0)">Add to My List</a>&nbsp;&nbsp;</span>
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+</div>
+
+
+    
+
+
+<div class='c-results-utility c-results-utility--partial'>
+  <div class="c-results-utility__container c-results-utility__container--result-count">
+    <div class="c-results-utility-result-count">
+        1
+        -
+        20
+        of
+        59
+    </div>
+    <div class="c-results-utility-per-page form-inline">  
+      <div class="c-results-utility-per-page__select-container select-styled">    
+        <select aria-label="Results per page dropdown" class="c-results-utility-per-page__select" id="dropdownResultsPerPageBottom" onchange="javascript:ajaxLoadResultsPage(1, 1, 'Bottom', 0);">
+           <option value="10">10</option>
+           <option value="20" selected>20</option>
+           <option value="30">30</option>
+           <option value="50">50</option>
+           <option value="100">100</option>
+        </select>
+      </div>
+      <span aria-label="per page"  class="c-results-utility-per-page__label">per page</span>
+    </div>
+  </div>
+
+  
+                 
+
+
+  <div class="c-results-utility__container c-results-utility__container--pagination c-results-utility__container--last">
+    <div class="c-results-utility-full-pagination">
+        
+            <ul id="pagination-results-bottom" class="pagination-sm" style="margin: 0px;"></ul>
+        
+    </div>
+  </div>
+ 
+
+</div>
+
+
+

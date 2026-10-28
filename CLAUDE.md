@@ -74,6 +74,10 @@ a `WorkIdentity` plus a `LibraryConfig` and return `Holding[]`. The scan queue
 
 - **Goodreads** retired its API in 2020. The RSS feed is undocumented and may
   vanish; CSV import exists so that is an inconvenience, not an outage.
+- **Print catalogs.** BiblioCommons has a JSON gateway; Polaris PowerPAC is
+  session-based HTML whose availability endpoint keys on result *position*,
+  not record id. Read "Print adapters — as built" in the roadmap before
+  touching either.
 - **OverDrive Thunder** (`thunder.api.overdrive.com`) needs no auth but is
   unpublished. It does **not** index ISBNs — digital lookups go out as
   title+creator, print catalogs get the ISBN cluster. Conflating the two finds

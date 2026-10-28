@@ -40,6 +40,11 @@ export interface FetchOptions {
   signal?: AbortSignal;
   headers?: Record<string, string>;
   timeoutMs?: number;
+  /**
+   * `include` for catalogs that keep search state in a server session (Polaris
+   * PowerPAC). Everything else is stateless and should not send cookies.
+   */
+  credentials?: RequestCredentials;
 }
 
 async function request(url: string, opts: FetchOptions = {}): Promise<Response> {
@@ -52,7 +57,11 @@ async function request(url: string, opts: FetchOptions = {}): Promise<Response> 
   const signals = opts.signal ? AbortSignal.any([opts.signal, timer.signal]) : timer.signal;
 
   try {
-    const res = await fetch(url, { signal: signals, headers: opts.headers });
+    const res = await fetch(url, {
+      signal: signals,
+      headers: opts.headers,
+      credentials: opts.credentials ?? 'omit',
+    });
     if (!res.ok) throw new HttpError(res.status, url);
     return res;
   } catch (err) {
@@ -73,6 +82,15 @@ export async function fetchJson<T>(url: string, opts?: FetchOptions): Promise<T>
 export async function fetchText(url: string, opts?: FetchOptions): Promise<string> {
   const res = await request(url, opts);
   return res.text();
+}
+
+/** As `fetchText`, plus where redirects landed — some catalogs signal an expired session only that way. */
+export async function fetchPage(
+  url: string,
+  opts?: FetchOptions,
+): Promise<{ text: string; finalUrl: string }> {
+  const res = await request(url, opts);
+  return { text: await res.text(), finalUrl: res.url || url };
 }
 
 // ---------------------------------------------------------------------------

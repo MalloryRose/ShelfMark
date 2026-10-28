@@ -16,7 +16,8 @@
 
 import type { Format, Holding, HoldingsProvider, ProviderLookupContext } from '../core/types';
 import { fetchJson, hostLimiter } from '../lib/http';
-import { authorSurname, normalizeTitle } from '../lib/normalize';
+import { titleAuthorAgree } from '../lib/match';
+import { authorSurname } from '../lib/normalize';
 
 const THUNDER = 'https://thunder.api.overdrive.com/v2';
 
@@ -55,30 +56,6 @@ function toFormat(typeId: string | undefined): Format | undefined {
       // magazine, video, etc. Not something you borrow off a to-read shelf.
       return undefined;
   }
-}
-
-/**
- * Does this result actually correspond to the book we asked about?
- *
- * This is the check the reference build omits — it pushes every result the
- * search returns straight onto the user's shelf, so a common title yields
- * confident matches for books they never listed. Phase 2 replaces this with a
- * real similarity score; until then, be strict rather than generous.
- */
-function isPlausibleMatch(item: ThunderItem, ctx: ProviderLookupContext): boolean {
-  const wanted = ctx.work.normalizedTitle;
-  const got = normalizeTitle(item.title ?? '');
-  if (!wanted || !got) return false;
-
-  // Either title contains the other: catches "Dune" vs "Dune: 50th Anniversary"
-  // without accepting "Dune" for "Dune Messiah", which shares no containment.
-  const titleAgrees = got === wanted || got.startsWith(`${wanted} `) || wanted.startsWith(`${got} `);
-  if (!titleAgrees) return false;
-
-  // The author gate. Cheap, and it's what stops same-title different-book.
-  const wantedSurname = authorSurname(ctx.work.author);
-  const gotSurname = authorSurname(item.firstCreatorName ?? '');
-  return wantedSurname.length > 0 && wantedSurname === gotSurname;
 }
 
 function toHolding(item: ThunderItem, ctx: ProviderLookupContext): Holding | undefined {
@@ -133,7 +110,9 @@ export const overdriveProvider: HoldingsProvider = {
     const bestByFormat = new Map<Format, Holding>();
 
     for (const item of body.items ?? []) {
-      if (!isPlausibleMatch(item, ctx)) continue;
+      // Thunder returns every fuzzy hit; the reference build accepted them all,
+      // so a common title yielded confident matches for books never listed.
+      if (!titleAuthorAgree(ctx.work, item.title ?? '', item.firstCreatorName ?? '')) continue;
       const holding = toHolding(item, ctx);
       if (!holding) continue;
 

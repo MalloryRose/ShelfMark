@@ -60,6 +60,14 @@ describe('normalizeAuthor', () => {
     expect(normalizeAuthor('Jane Smith, PhD')).toBe('jane smith');
   });
 
+  it('strips MARC fuller forms, dates and relator terms', () => {
+    expect(normalizeAuthor('Tolkien, J. R. R. (John Ronald Reuel), 1892-1973, author.')).toBe(
+      'j r r tolkien',
+    );
+    expect(normalizeAuthor('Clarke, Susanna, author.')).toBe('susanna clarke');
+    expect(normalizeAuthor('Loconte, Joe, 1961- author.')).toBe('joe loconte');
+  });
+
   it('extracts surname regardless of given-name form', () => {
     expect(authorSurname('J.R.R. Tolkien')).toBe('tolkien');
     expect(authorSurname('Tolkien, John Ronald Reuel')).toBe('tolkien');

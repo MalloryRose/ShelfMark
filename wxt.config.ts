@@ -23,6 +23,9 @@ export default defineConfig({
     host_permissions: [
       'https://www.goodreads.com/*',
       'https://thunder.api.overdrive.com/*',
+      // One vendor API shared by every BiblioCommons library, like Thunder for
+      // OverDrive. The per-library catalog hosts stay runtime-requested.
+      'https://gateway.bibliocommons.com/*',
       'https://openlibrary.org/*',
     ],
 

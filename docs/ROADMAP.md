@@ -7,7 +7,10 @@ lists its goal, the files involved, **verified** API shapes, the traps, and what
 Read [`../CLAUDE.md`](../CLAUDE.md) first — its seven invariants apply to every
 phase and several of them are non-obvious.
 
-**Status:** phase 1 complete. Phase 2 is next and unblocks phase 3.
+**Status:** phase 1 complete. The BiblioCommons and Polaris adapters from
+phases 3 and 5 landed early (2026-10-28) on title+author and ISBN matching —
+see "Print adapters — as built" below. Phase 2 is still next: their recall
+improves once works carry a real ISBN cluster.
 
 Anything marked **verified** was requested live against the real endpoint.
 Anything marked **unverified** needs a spike before you design against it.
@@ -194,6 +197,58 @@ path that accepts a raw catalog URL and runs `provider.detect()`.
 - Adapter tests run against recorded fixtures with no network.
 - Adding a library asks for its origin at that moment, and a fresh install can
   reach no catalog at all.
+
+---
+
+## Print adapters — as built
+
+Both live in `src/providers/` and share `print.ts` (edition roll-up, branch
+roll-up) and `lib/match.ts` (the one matching rule, also used by OverDrive).
+Fixtures were recorded live on 2026-10-28.
+
+### BiblioCommons — **verified**, supersedes the phase 3 notes above
+
+No HTML parsing: the catalog front end calls a JSON gateway shared by every
+BiblioCommons library, now a static host permission like Thunder.
+
+```
+GET gateway.bibliocommons.com/v2/libraries/{key}/bibs/search
+    ?searchType=bl&view=grouped&limit=20
+    &query=identifier:(isbn1 OR isbn2) OR (title:(dune) AND contributor:(herbert))
+→ entities.bibs[id].briefInfo     { title, authors, format: BK|LPRINT|EBOOK|…, callNumber, isbns, jacket }
+→ entities.bibs[id].availability  { availableCopies, totalCopies, heldCopies, onOrderCopies, libraryUseOnly }
+
+GET …/bibs/{id}/availability
+→ entities.bibItems[*]            { branchName, callNumber, dueDate, availability.statusType }
+```
+
+- Search results already carry copy counts; the per-branch call is made only
+  for editions with a copy in, capped at `MAX_BRANCH_LOOKUPS`.
+- `status: AVAILABLE` appears on records with 0 of 0 copies. Trust the counts.
+- Digital records are ignored here on purpose — the OverDrive adapter owns them.
+
+### Polaris PowerPAC — **verified on Denver (8.0)**; other installs unverified
+
+Session-based HTML, three requests per lookup, serialised per catalog origin:
+`searchresults.aspx` (stores the search) → `components/ajaxResults.aspx`
+(results fragment) → `components/ajaxavailability.aspx?pos=N` (branches).
+The last one **ignores `bibid` and reads result N of the session's current
+search**; the adapter checks the `N.` the page prints and rejects a mismatch.
+
+Open questions, in priority order:
+
+- [ ] **Cookies from the service worker.** Requests use `credentials:
+      'include'`. Tests prove the protocol; nothing yet proves Chrome keeps
+      the ASP.NET session cookie for a worker fetch. First thing to check in a
+      real browser.
+- [ ] **Recall.** Keyword search returns 20 hits by relevance; for *The
+      Hobbit* at Denver the plain hardback isn't among them, only a 2025
+      edition. Try `by=TI` plus an author limit, or `hpp=50`.
+- [ ] **Brief-display labels are configurable** ("Available Copies",
+      "Call Number"). Missing counts fall back to the availability page, but
+      try a second Polaris library before trusting the labels elsewhere.
+- [ ] **The user's own tabs.** A scan replaces the current search in any open
+      tab on that catalog. Probably acceptable; say so in the UI if not.
 
 ---
 
